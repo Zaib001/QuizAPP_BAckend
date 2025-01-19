@@ -32,6 +32,12 @@ app.get("/", (req, res) => {
   res.send("Server is running. Welcome to the QuizApp backend!");
 });
 
+const PORT = 3000;
+
+app.listen(PORT, function(err){
+    if (err) console.log("Error in server setup")
+    console.log("Server listening on Port", PORT);
+})
 
 // Export the express app as a Vercel function
 module.exports = app;
